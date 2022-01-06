@@ -1,28 +1,18 @@
 import math
-
-
 def descuento(prices,discount):
     suma = 0
     largest = prices[0]
     item  = 0
     for i in prices:
         suma += i
-
     for num in range(len(prices)):
         if prices[num]> largest:
             largest=prices[num]
 
             item = largest - (largest * discount / 100)
-
     net_price = suma- largest + item
-
-
-
-
     instancia = isinstance(net_price,float)
     print(instancia)
-
-
     if instancia == True :
         rounded_price = math.floor(net_price)
     print(rounded_price)
